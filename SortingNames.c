@@ -46,6 +46,11 @@ int main() {
   printf("Enter sort order (asc/desc): ");
   scanf("%s", order);
 
+  if (strcmp(order, "asc") != 0 && strcmp(order, "desc") != 0) {
+    printf("Invalid input!\n");
+    return 1;
+  }
+
   // Function pointer declaration
   void (*sortFunction)(char[][NAME_LENGTH], int);
 
